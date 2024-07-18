@@ -10,17 +10,26 @@ import {User} from "../modeles/user";
 })
 
 export class UserComponent implements OnInit{
+
+  GetUser: User[] = [];
+
   Adduserform!:FormGroup
   ngOnInit(): void {
+    this.loadLectures();
+
     this.Adduserform=this.fb.group({
       nom:'',
       password:'',
       age:'',
     })
   }
-constructor( private test:UserService,private fb:FormBuilder) {
+constructor( private userService:UserService,private fb:FormBuilder) {
 }
-
+  loadLectures(): void {
+    this.userService.GetAllUsers().subscribe((data: User[]) => {
+      this.GetUser = data;
+    });
+  }
   saveUser() {
     const FormValue=this.Adduserform.value;
     const user : User={
@@ -33,7 +42,7 @@ constructor( private test:UserService,private fb:FormBuilder) {
     console.log(FormValue.nom)
     console.log(FormValue.password)
     console.log(FormValue.age)
-  this.test.Adduser(user).subscribe()
+  this.userService.Adduser(user).subscribe()
     this.Adduserform=this.fb.group({
       nom:'',
       password:'',
