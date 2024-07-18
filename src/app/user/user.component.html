@@ -1,1 +1,15 @@
 <p>user works!</p>
+<form [formGroup]="Adduserform" (ngSubmit)="saveUser()">
+
+  <label for="nom">Nom :</label>
+  <input id="nom" formControlName="nom" type="text">
+
+  <label for="Password">Password:</label>
+  <input id="Password" formControlName="password" type="number">
+
+  <label for="age">age:</label>
+  <input id="age" formControlName="age" type="number">
+
+
+  <button  type="submit">add</button>
+</form>

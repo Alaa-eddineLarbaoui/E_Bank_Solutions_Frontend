@@ -8,6 +8,8 @@ import { CartebankComponent } from './cartebank/cartebank.component';
 import { CompteComponent } from './compte/compte.component';
 import { BeneficiaireComponent } from './beneficiaire/beneficiaire.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TransactionComponent } from './transaction/transaction.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
