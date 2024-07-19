@@ -1,0 +1,30 @@
+
+
+<form [formGroup]="Adduserform" (ngSubmit)="saveUser()">
+
+  <label for="nom">Nom :</label>
+  <input id="nom" formControlName="nom" type="text">
+
+  <label for="Password">Password:</label>
+  <input id="Password" formControlName="password" type="password">
+
+  <label for="age">age:</label>
+  <input id="age" formControlName="age" type="number">
+  <button  type="submit">add</button>
+</form>
+
+
+<div class="user-container">
+  <h2>Liste des Utilisateurs</h2>
+  <ul class="user-list list-group">
+    <li class="user-item list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of GetUser">
+      <div>
+        <div class="user-id">ID: {{user.userId}}</div>
+        <div class="user-nom">Nom: {{user.nom}}</div>
+        <div class="user-password">Password: {{user.password }}</div>
+        <div class="user-age">Âge: {{user.age}}</div>
+      </div>
+      <button class="btn btn-danger" (click)="deleteCustomer(user.userId)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -25,11 +25,14 @@ export class UserComponent implements OnInit{
   }
 constructor( private userService:UserService,private fb:FormBuilder) {
 }
+// function GET USERS  ****************************************************************
   loadLectures(): void {
     this.userService.GetAllUsers().subscribe((data: User[]) => {
       this.GetUser = data;
     });
   }
+
+  //function ADD USER *****************************************************************
   saveUser() {
     const FormValue=this.Adduserform.value;
     const user : User={
@@ -43,10 +46,39 @@ constructor( private userService:UserService,private fb:FormBuilder) {
     console.log(FormValue.password)
     console.log(FormValue.age)
   this.userService.Adduser(user).subscribe()
+
+// For empty the inputs after adding *************************************************
     this.Adduserform=this.fb.group({
       nom:'',
       password:'',
       age:'',
     })
   }
+
+  ////
+  //private delete = document.getElementById("delete")
+ // deleting(){
+    // @ts-ignore
+ //   document.addEventListener("click", ()=>{
+      // @ts-ignore
+ //     let id : any = this.delete.value;
+   //   this.userService.DeleteUser(id);
+//    })
+ // }
+
+
+
+// Function to delete user
+deleteCustomer(userId: number): void {
+  this.userService.DeleteUser(userId).subscribe(
+    response => {
+      console.log('User deleted successfully', response);
+      this.GetUser = this.GetUser.filter(user => user.userId !== userId);
+    },
+    error => {
+      console.error('There was an error!', error);
+    }
+  );
+}
+
 }
