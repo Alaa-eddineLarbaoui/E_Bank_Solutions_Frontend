@@ -1,17 +1,42 @@
-<h1>Add User</h1>
-<form [formGroup]="Adduserform" (ngSubmit)="saveUser()">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  <label for="nom">Nom :</label>
-  <input id="nom" formControlName="nom" type="text">
+<div class="form-container container mt-5">
+  <h1 class="text-center">Add User</h1>
+  <form [formGroup]="Adduserform" (ngSubmit)="saveUser()" class="mt-4">
+    <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input id="nom" formControlName="nom" type="text" class="form-control">
+    </div>
 
-  <label for="password">Password:</label>
-  <input id="password" formControlName="password" type="password">
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" class="form-control">
+    </div>
 
-  <label for="age">Age:</label>
-  <input id="age" formControlName="age" type="number">
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number" class="form-control">
+    </div>
 
-  <button type="submit">Add</button>
-</form>
+    <button type="submit" class="btn btn-primary btn-block">Add</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
 
 
 <!--
