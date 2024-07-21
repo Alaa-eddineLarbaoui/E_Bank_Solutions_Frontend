@@ -19,7 +19,7 @@ export class CompteComponent implements OnInit {
   constructor(private fb: FormBuilder, private compService: CompteService , private rout :ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    this.userId = this.rout.snapshot.paramMap.get('id')
     this.Getcomptes();
 
 
@@ -39,8 +39,7 @@ export class CompteComponent implements OnInit {
         age: [0]
       })
     });
-    // Retrieve the userId from the route params
-    this.userId = this.rout.snapshot.paramMap.get('id');
+
   }
 
 
@@ -79,7 +78,7 @@ export class CompteComponent implements OnInit {
 
 
   //function get Comptes  *****************************************************************
-  Getcomptes(): void {
+  Getcomptes( ): void {
     this.compService.GetAllCompteOfsUer(this.userId).subscribe((data: Compte[]) => {
       this.ListofCompte = data;
     });

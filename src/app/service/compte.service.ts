@@ -22,7 +22,7 @@ export class CompteService {
   //  return this.http.get<Compte[]>(`${this.api}/getAll/${Id}`);
   //}
   GetAllCompteOfsUer(Id : number){
-    return this.http.get<Compte[]>(this.api + `getAll/${Id}`);
+    return this.http.get<Compte[]>(this.api + `getAll/`+Id);
   }
  // DeleteCompte(id : number){
  //   return this.http.delete<User>(this.api+"user/delete/"+id)
