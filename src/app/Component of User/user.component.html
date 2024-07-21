@@ -25,6 +25,9 @@
         <div class="user-age">Âge: {{user.age}}</div>
       </div>
       <button class="btn btn-danger" (click)="deleteCustomer(user.userId)">Delete</button>
+      <!--<a  class="btn btn-secondary" routerLink="/add_compte/27">Add compte</a>-->
+      <a class="btn btn-secondary" [routerLink]="['/add_compte', user.userId]">Add compte</a>
+
     </li>
   </ul>
 </div>

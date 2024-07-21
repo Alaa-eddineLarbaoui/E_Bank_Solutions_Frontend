@@ -32,9 +32,14 @@ userId !: any
         age: [0]
       })
     });
+    // Retrieve the userId from the route params
+    this.userId = this.rout.snapshot.paramMap.get('id');
   }
 
-  saveCompte() {
+
+
+
+  saveCompte(): void {
     const formValue = this.AddComptform.value;
     const compte: Compte = {
       accountId: formValue.accountId,
@@ -53,9 +58,6 @@ userId !: any
       }
     };
 
-    // Assuming userId is available and set correctly
-    const userId = formValue.user.userId;
-    this.userId = this.rout.snapshot.paramMap.get("id")
     this.compService.Addcompte(compte, this.userId).subscribe(
       response => {
         console.log('Compte added successfully', response);

@@ -7,6 +7,8 @@ const routes: Routes = [
   {path:"add_user",component:UserComponent},
   {path:"get_user",component:UserComponent},
   {path:"add_compte/:id",component:CompteComponent}
+  //{path:"add_compte",component:CompteComponent}
+
 ];
 
 @NgModule({
