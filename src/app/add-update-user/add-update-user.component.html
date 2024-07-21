@@ -1,0 +1,37 @@
+<h1>Add User</h1>
+<form [formGroup]="Adduserform" (ngSubmit)="saveUser()">
+
+  <label for="nom">Nom :</label>
+  <input id="nom" formControlName="nom" type="text">
+
+  <label for="password">Password:</label>
+  <input id="password" formControlName="password" type="password">
+
+  <label for="age">Age:</label>
+  <input id="age" formControlName="age" type="number">
+
+  <button type="submit">Add</button>
+</form>
+
+
+<!--
+<h1> update user </h1>
+<form [formGroup]="Adduserform" (ngSubmit)="updateUser()">
+  <label for="nom">id:</label>
+  <input id="userId" formControlName="userId" type="number">
+
+  <label for="nom">Nom:</label>
+  <input id="nom" formControlName="nom" type="text">
+
+  <label for="password">Password:</label>
+  <input id="password" formControlName="password" type="password">
+
+  <label for="age">Age:</label>
+  <input id="age" formControlName="age" type="number">
+
+  <button type="submit">Update</button>
+</form>  -->
+
+
+
+

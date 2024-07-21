@@ -18,5 +18,8 @@ export class UserService {
   DeleteUser(id : number){
     return this.http.delete<User>(this.api+"user/delete/"+id)
   }
+  public updateUser(id:any,inputData:User){
+    return this.http.put(this.api+"user/update/"+id,inputData)
+  }
 
 }

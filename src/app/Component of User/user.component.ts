@@ -17,13 +17,9 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
     this.Getusers();
 
-    this.Adduserform=this.fb.group({
-      nom:'',
-      password:'',
-      age:'',
-    })
+
   }
-constructor( private userService:UserService,private fb:FormBuilder) {
+constructor( private userService:UserService) {
 }
 // function GET USERS  ****************************************************************
   Getusers(): void {
@@ -33,27 +29,7 @@ constructor( private userService:UserService,private fb:FormBuilder) {
   }
 
   //function ADD USER *****************************************************************
-  saveUser() {
-    const FormValue=this.Adduserform.value;
-    const user : User={
-      userId:0,
-      nom : FormValue.nom,
-      password : FormValue.password,
-      age : FormValue.age,
-      listeCompte:[]
-    }
-    console.log(FormValue.nom)
-    console.log(FormValue.password)
-    console.log(FormValue.age)
-  this.userService.Adduser(user).subscribe()
 
-// For empty the inputs after adding *************************************************
-    this.Adduserform=this.fb.group({
-      nom:'',
-      password:'',
-      age:'',
-    })
-  }
 
   ////
   //private delete = document.getElementById("delete")
@@ -80,5 +56,6 @@ deleteCustomer(userId: number): void {
     }
   );
 }
+
 
 }

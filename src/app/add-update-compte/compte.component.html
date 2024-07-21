@@ -1,0 +1,29 @@
+
+
+
+
+  <form [formGroup]="AddComptform" (ngSubmit)="saveCompte()">
+
+    <div>
+      <label for="account_type">Account Type</label>
+      <input id="account_type" formControlName="account_type" type="text">
+    </div>
+    <div>
+      <label for="solde">Solde</label>
+      <input id="solde" formControlName="solde" type="number">
+    </div>
+
+    <div>
+      <label for="status">Status</label>
+      <input id="status" formControlName="status" type="text">
+    </div>
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+
+
+
