@@ -74,6 +74,11 @@ export class CompteComponent implements OnInit {
         console.error('There was an error!', error);
       }
     );
+    this.AddComptform=this.fb.group({
+      solde:'',
+      account_type:'',
+
+    })
   }
 
 

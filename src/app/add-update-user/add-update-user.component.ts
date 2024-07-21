@@ -55,7 +55,7 @@ export class AddUpdateUserComponent implements OnInit{
 
 
 
-// Function to update user ***********************************************************************
+// Function to delete user ***********************************************************************
 
 
   updateUser() {
@@ -66,5 +66,15 @@ export class AddUpdateUserComponent implements OnInit{
       age: this.Adduserform.value.age
     };
 
+   // this.userService.updateUser(this.userId, userData).subscribe(
+    //  response => {
+     //   console.log('User updated successfully', response);
+        // Code pour mettre à jour l'interface utilisateur après la mise à jour
+   //   },
+  //    error => {
+      //  console.error('There was an error!', error);
+      }
+   // );
+//  }
 
-  }}
+}

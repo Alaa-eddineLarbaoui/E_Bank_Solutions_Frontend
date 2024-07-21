@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {UserComponent} from "./Component of User/user.component";
 import {CompteComponent} from "./add-update-compte/compte.component";
 import {AddUpdateUserComponent} from "./add-update-user/add-update-user.component";
+import {FunctionCompteComponent} from "./Compon_function-compte/function-compte.component";
 
 const routes: Routes = [
   {path:"add_user",component:AddUpdateUserComponent},
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:"add_compte/:id",component:CompteComponent},
 
   //{path:"add_compte",component:CompteComponent}
-  {path:"get_Compte/:id" , component:CompteComponent}
+  {path:"get_Compte/:id" , component:FunctionCompteComponent}
+
 
 ];
 
