@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import { CompteService } from "../service/compte.service";
 import { Compte } from "../modeles/compte";
 import {ActivatedRoute} from "@angular/router";
+import {User} from "../modeles/user";
 
 @Component({
   selector: 'app-compte',
@@ -11,11 +12,17 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CompteComponent implements OnInit {
 
+  ListofCompte: Compte[] = [];
+
   AddComptform!: FormGroup;
-userId !: any
+  userId !: any
   constructor(private fb: FormBuilder, private compService: CompteService , private rout :ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.Getcomptes();
+
+
     this.AddComptform = this.fb.group({
       accountId: [0],
       account_type: [''],
@@ -38,7 +45,7 @@ userId !: any
 
 
 
-
+//function ADD Compte *****************************************************************
   saveCompte(): void {
     const formValue = this.AddComptform.value;
     const compte: Compte = {
@@ -69,4 +76,13 @@ userId !: any
       }
     );
   }
+
+
+  //function get Comptes  *****************************************************************
+  Getcomptes(): void {
+    this.compService.GetAllCompteOfsUer(this.userId).subscribe((data: Compte[]) => {
+      this.ListofCompte = data;
+    });
+  }
+
 }

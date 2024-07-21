@@ -6,8 +6,10 @@ import {CompteComponent} from "./Component of compte/compte.component";
 const routes: Routes = [
   {path:"add_user",component:UserComponent},
   {path:"get_user",component:UserComponent},
-  {path:"add_compte/:id",component:CompteComponent}
+  {path:"add_compte/:id",component:CompteComponent},
+
   //{path:"add_compte",component:CompteComponent}
+  {path:"get_Compte/:id" , component:CompteComponent}
 
 ];
 

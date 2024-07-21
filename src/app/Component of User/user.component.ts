@@ -15,7 +15,7 @@ export class UserComponent implements OnInit{
 
   Adduserform!:FormGroup
   ngOnInit(): void {
-    this.loadLectures();
+    this.Getusers();
 
     this.Adduserform=this.fb.group({
       nom:'',
@@ -26,7 +26,7 @@ export class UserComponent implements OnInit{
 constructor( private userService:UserService,private fb:FormBuilder) {
 }
 // function GET USERS  ****************************************************************
-  loadLectures(): void {
+  Getusers(): void {
     this.userService.GetAllUsers().subscribe((data: User[]) => {
       this.GetUser = data;
     });
@@ -68,7 +68,7 @@ constructor( private userService:UserService,private fb:FormBuilder) {
 
 
 
-// Function to delete user
+// Function to delete user ***********************************************************************
 deleteCustomer(userId: number): void {
   this.userService.DeleteUser(userId).subscribe(
     response => {
