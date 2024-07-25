@@ -1,5 +1,14 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="function-compte.component.css">
+</head>
+<body>
 <div class="account-container">
   <h1>Liste des Comptes</h1>
   <ul class="account-list list-group">
@@ -10,10 +19,16 @@
         <div class="account-type">Account Type: {{compte.account_type}}</div>
         <div class="account-solde">Solde: {{compte.solde}}</div>
         <div class="account-date-creation">Date de Création: {{compte.date_creation}}</div>
-        <div class="account-closed">Account Closed: {{compte.accountClosed}}</div>
-        <div class="raison-closing">Raison Closing: {{compte.raisonClosing}}</div>
+       <!-- <div class="account-closed">Account Closed: {{compte.accountClosed}}</div>
+        <div class="raison-closing">Raison Closing: {{compte.raisonClosing}}</div>  -->
       </div>
     </li>
   </ul>
 </div>
 
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

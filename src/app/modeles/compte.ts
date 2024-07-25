@@ -1,4 +1,4 @@
-import {AccountType} from "../account-type";
+import {AccountType} from "./account-type";
 import {User} from "./user";
 
 export interface Compte{

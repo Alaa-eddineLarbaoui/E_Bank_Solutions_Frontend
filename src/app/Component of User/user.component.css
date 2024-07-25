@@ -1,90 +1,76 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-}
-
-.user-container {
+.account-container {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-.user-container h2 {
+.account-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e323d;
   margin-bottom: 20px;
+}
+
+.account-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.account-item {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.account-item:hover {
+  background-color: #e9ecef;
+}
+
+.account-id, .account-number, .account-type, .account-solde, .account-date-creation, .account-closed, .raison-closing {
+  font-size: 14px;
+  color: #495057;
+}
+
+.account-id {
   font-weight: bold;
   color: #007bff;
 }
 
-.user-list {
-  padding: 0;
-  margin: 0;
-}
-
-.user-item {
-  background-color: #e9ecef;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.user-item:hover {
-  background-color: #f1f3f5;
-}
-
-.user-item div {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-id,
-.user-nom,
-.user-age {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
 .btn {
-  transition: transform 0.2s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border: none;
+  min-width: 100px; /* Ensure all buttons have a minimum width */
 }
 
 .btn-secondary {
   background-color: #6c757d;
-  border: none;
+  border-color: #6c757d;
 }
 
-.btn-secondary.ml-2 {
-  margin-left: 10px;
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 @media (max-width: 768px) {
-  .user-item {
+  .account-container {
+    padding: 15px;
+  }
+
+  .account-item {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .user-item div {
-    width: 100%;
-  }
-
   .btn {
-    width: 100%;
     margin-top: 10px;
+    min-width: 100%;  
   }
 
-  .btn-secondary.ml-2 {
+  .btn + .btn {
     margin-left: 0;
   }
 }

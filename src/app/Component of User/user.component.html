@@ -18,10 +18,10 @@
         <div class="user-nom">Nom: {{user.nom}}</div>
         <div class="user-age">Âge: {{user.age}}</div>
       </div>
-      <div>
-        <button class="btn btn-danger" (click)="deleteCustomer(user.userId)">Delete</button>
-        <a class="btn btn-secondary ml-2" [routerLink]="['/add_compte',user.userId ]">Add Compte</a>
-        <a class="btn btn-secondary ml-2" [routerLink]="['/get_Compte',user.userId ]">Show Compte</a>
+      <div class="d-flex flex-wrap">
+        <button class="btn btn-danger mr-2 mb-2" (click)="deleteCustomer(user.userId)">Delete</button>
+        <a class="btn btn-success mr-2 mb-2" [routerLink]="['/add_compte',user.userId ]">Add Compte</a>
+        <a class="btn btn-secondary mb-2" [routerLink]="['/get_Compte',user.userId ]">Show Compte</a>
       </div>
     </li>
   </ul>
