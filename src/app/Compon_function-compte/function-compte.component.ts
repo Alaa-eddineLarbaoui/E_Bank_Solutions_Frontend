@@ -31,5 +31,16 @@ export class FunctionCompteComponent implements OnInit{
       this.ListofCompte = data;
     });
   }
+  deleteCompte(accountId: number): void {
+    this.compService.DeleteCompte(accountId).subscribe(
+      response => {
+        console.log('compte deleted successfully', response);
+        this.ListofCompte = this.ListofCompte.filter(compte => compte.accountId !== accountId);
+      },
+      error => {
+        console.error('There was an error!', error);
+      }
+    );
+  }
 
 }

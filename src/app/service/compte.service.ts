@@ -27,4 +27,8 @@ export class CompteService {
  // DeleteCompte(id : number){
  //   return this.http.delete<User>(this.api+"user/delete/"+id)
 //  }
+
+  DeleteCompte(id: number){
+    return this.http.delete<Compte>(this.api+'delete/'+id)
+  }
 }

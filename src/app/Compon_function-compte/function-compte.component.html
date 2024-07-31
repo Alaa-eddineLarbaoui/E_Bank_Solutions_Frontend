@@ -13,13 +13,15 @@
   <h1>Liste des Comptes</h1>
   <ul class="account-list list-group">
     <li class="account-item list-group-item d-flex justify-content-between align-items-center" *ngFor="let compte of ListofCompte">
-      <div>
+      <div >
         <div class="account-id">Account ID: {{compte.accountId}}</div>
         <div class="account-number">Account Number: {{compte.account_number}}</div>
         <div class="account-type">Account Type: {{compte.account_type}}</div>
         <div class="account-solde">Solde: {{compte.solde}}</div>
         <div class="account-date-creation">Date de Création: {{compte.date_creation}}</div>
+        <button class="btn btn-danger mr-2 mb-2" (click)="deleteCompte(compte.accountId)">Delete</button>
        <!-- <div class="account-closed">Account Closed: {{compte.accountClosed}}</div>
+
         <div class="raison-closing">Raison Closing: {{compte.raisonClosing}}</div>  -->
       </div>
     </li>
