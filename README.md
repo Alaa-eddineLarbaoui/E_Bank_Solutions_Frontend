@@ -1,5 +1,7 @@
 # EBankFrontend
 
+the link  of the backend  : https://github.com/Alaa-eddineLarbaoui/E_Bank_Solution.git
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
 ## Development server
