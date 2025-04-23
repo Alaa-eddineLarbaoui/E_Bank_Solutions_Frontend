@@ -39,6 +39,10 @@
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* media query for smaller screens */
+/* Adjust the styles for smaller screens */
+/* This will make the form more responsive and user-friendly on mobile devices */
+
 
 /* Account details styling */
 .account-id,
