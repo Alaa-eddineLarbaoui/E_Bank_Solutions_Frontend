@@ -55,6 +55,12 @@
   border-color: #dc3545;
 }
 
+/* media query for smaller screens */
+/* Adjust the styles for smaller screens */
+/* This will make the form more responsive and user-friendly on mobile devices */
+
+
+
 @media (max-width: 768px) {
   .account-container {
     padding: 15px;
