@@ -1,79 +1,105 @@
 .account-container {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .account-container h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e323d;
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2d3d;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .account-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .account-item {
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  transition: background-color 0.3s ease;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #f9fafb;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .account-item:hover {
-  background-color: #e9ecef;
+  background-color: #eef2f7;
+  transform: translateY(-2px);
 }
 
-.account-id, .account-number, .account-type, .account-solde, .account-date-creation, .account-closed, .raison-closing {
-  font-size: 14px;
-  color: #495057;
+.account-id, 
+.account-number, 
+.account-type, 
+.account-solde, 
+.account-date-creation, 
+.account-closed, 
+.raison-closing {
+  font-size: 15px;
+  color: #334155;
 }
 
 .account-id {
-  font-weight: bold;
-  color: #007bff;
+  font-weight: 600;
+  color: #2563eb;
 }
 
 .btn {
-  min-width: 100px; /* Ensure all buttons have a minimum width */
+  min-width: 110px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-secondary {
   background-color: #6c757d;
-  border-color: #6c757d;
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
 }
 
 .btn-danger {
   background-color: #dc3545;
-  border-color: #dc3545;
+  border: none;
+  color: white;
 }
 
-/* media query for smaller screens */
-/* Adjust the styles for smaller screens */
-/* This will make the form more responsive and user-friendly on mobile devices */
+.btn-danger:hover {
+  background-color: #c82333;
+}
 
-
-
+/* Responsive */
 @media (max-width: 768px) {
   .account-container {
-    padding: 15px;
+    padding: 20px;
   }
 
   .account-item {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 15px;
   }
 
   .btn {
+    width: 100%;
     margin-top: 10px;
-    min-width: 100%;  
   }
 
   .btn + .btn {
