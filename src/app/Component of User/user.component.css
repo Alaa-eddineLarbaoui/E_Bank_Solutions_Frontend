@@ -88,6 +88,9 @@
 }
 
 /* Responsive */
+/* Adjustments for smaller screens */
+/* This will make the account container and items more mobile-friendly */ 
+
 @media (max-width: 768px) {
   .account-container {
     padding: 20px;
