@@ -1,0 +1,84 @@
+/* General container styling */
+.account-container {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.account-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List and items styling */
+.account-list {
+  padding: 0;
+  list-style: none;
+}
+
+.account-item {
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.account-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* media query for smaller screens */
+/* Adjust the styles for smaller screens */
+/* This will make the form more responsive and user-friendly on mobile devices */
+
+
+/* Account details styling */
+.account-id,
+.account-number,
+.account-type,
+.account-solde,
+.account-date-creation {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.account-id {
+  font-weight: bold;
+  color: #6a11cb;
+}
+
+.account-type {
+  font-style: italic;
+  color: #2575fc;
+}
+
+/* Button styling */
+.btn-danger {
+  background-color: #ff5252;
+  border: none;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #ff1744;
+  transform: scale(1.05);
+}
+
+.btn-danger:active {
+  background-color: #d50000;
+}
